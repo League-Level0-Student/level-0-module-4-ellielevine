@@ -1,5 +1,7 @@
 package _02_boolean._5_googly_eyes;
 
+import java.io.File;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -9,10 +11,10 @@ import processing.core.PImage;
  * Instructions:
  * 1. Find an image on the Internet and drop it into the /images folder at the
  *    top level of this module. It can be anything as long as it has large eyes!
- * 
+ *    
  * 2. Declare a variable for the image:
  *    PImage face;
- * 
+ *    
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
@@ -41,7 +43,7 @@ public class GooglyEyes extends PApplet {
     static final int HEIGHT = 600;
     
     PImage face;
-    
+
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -49,12 +51,21 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-
+   face = loadImage("images/smiley.jpg");
+   face.resize(800, 600);
     }
 
     @Override
     public void draw() {
-
+background(face);
+fill(0x999999);
+ellipse(mouseX, mouseY, 300, 300);
+fill(0x000000);
+ellipse(mouseX, mouseY, 100, 100);
+fill(0xffffff);
+ellipse(mouseX, mouseY, 300, 300);
+fill(0x000000);
+ellipse(mouseX + (50), mouseY + (50), 100, 100);
     }
 
     static public void main(String[] args) {
