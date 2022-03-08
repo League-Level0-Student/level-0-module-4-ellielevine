@@ -58,14 +58,14 @@ public class GooglyEyes extends PApplet {
     @Override
     public void draw() {
 background(face);
-fill(0x999999);
-ellipse(mouseX, mouseY, 300, 300);
-fill(0x000000);
+fill(255, 255, 255);
+ellipse(mouseX, mouseY, 225, 225);
+fill(255, 255, 255);
+ellipse(mouseX + 300, mouseY, 225, 225);
+fill(000, 000, 000);
 ellipse(mouseX, mouseY, 100, 100);
-fill(0xffffff);
-ellipse(mouseX, mouseY, 300, 300);
-fill(0x000000);
-ellipse(mouseX + (50), mouseY + (50), 100, 100);
+fill(000, 000, 000);
+ellipse(mouseX + 300, mouseY, 100, 100);
     }
 
     static public void main(String[] args) {

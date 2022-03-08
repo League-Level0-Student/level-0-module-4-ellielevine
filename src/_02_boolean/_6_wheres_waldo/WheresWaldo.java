@@ -31,6 +31,11 @@ import processing.core.PImage;
  *      use the following code to help you:
  *      println("X: " + mouseX + " Y: " + mouseY);
  * 
+ * top of waldo's head= 395, 201
+ * bottom of waldo's feet= 398, 276
+ * left side of wald'o= 371, 213
+ * rights side of wald'o= 416, 226
+ * 
  *   7. Use an if statement to check if the user clicked the mouse
  * 
  *   8. If the user clicked the mouse, use another if statement to check the
@@ -50,12 +55,20 @@ public class WheresWaldo extends PApplet {
 
     @Override
     public void setup() {
-        
+    waldo = loadImage("images/waldo.jpg");
+    waldo.resize(600,400);
     }
 
     @Override
     public void draw() {
-        
+        background(waldo);
+    if(mousePressed) {
+    	if(371<=mouseX && mouseX<=416 && 201<=mouseY && mouseY<=276){
+    		playWhoohoo();
+    	}	else {
+    		playDoh();
+    	}
+    }
     }
 
     static public void main(String[] args) {
