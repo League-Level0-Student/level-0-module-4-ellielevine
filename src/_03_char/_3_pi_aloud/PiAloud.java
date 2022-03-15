@@ -37,7 +37,7 @@ for(int i=0; i<pi.length(); i++) {
 	
 	// [CHALLENGE]
 	// *6. Get a character from the user using the getInputFromUser() method
-
+//uh
 	// *7. Compare the users' char to the next digit of Pi
 String user = JOptionPane.showInputDialog("print the next digit of pi");
 int digit = Integer.parseInt(user);
